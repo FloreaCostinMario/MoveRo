@@ -44,6 +44,8 @@ jobs:  # Telling what jobs we need to happen
       - name: Disable analytics
         run: flutter config --no-analytics
         
+      - run: flutter analyze
+        
       - name: Build apk
         run: flutter build apk --release
       
