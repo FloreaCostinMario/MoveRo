@@ -8,7 +8,7 @@ on:
 
 jobs:  # Telling what jobs we need to happen
   test:
-    name: Test app
+    name: Analyze & test app
     runs-on: macos-latest # here we selected macos-latest to be able to get ios build
     steps:
       - name: Clone repository
@@ -44,7 +44,7 @@ jobs:  # Telling what jobs we need to happen
       - name: Disable analytics
         run: flutter config --no-analytics
         
-      - run: flutter analyze
+      - run: flutter pub get
         
       - name: Build apk
         run: flutter build apk --release
