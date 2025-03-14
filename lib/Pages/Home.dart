@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ro_transit_app/Utils/FetchOperators.dart';
+import 'package:ro_transit_app/Blocs/Operators/operators_bloc.dart';
 import 'package:ro_transit_app/Utils/Operators.dart';
 import 'package:ro_transit_app/Widgets/CloseOperators.dart';
 import 'package:ro_transit_app/Widgets/OperatorCard.dart';
 import 'package:searchable_listview/searchable_listview.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:diacritic/diacritic.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -96,47 +97,96 @@ class Home extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      child: SearchableList(
-                        initialList: GetOperators(),
-                        searchFieldPadding: EdgeInsets.only(bottom: 5, top: 5),
-                        inputDecoration: InputDecoration(
-                          hintText: "Cautare",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.0),
-                            borderSide: BorderSide(width: 1.0),
-                          ),
-                          focusColor: Theme.of(context).focusColor,
-                          focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(width: 2.0),
-                          ),
-                        ),
-                        itemBuilder:
-                            (item) => OperatorCard(ServiceOperator: item),
-                        sortPredicate:
-                            (a, b) => a.Name.toLowerCase().compareTo(
-                              b.Name.toLowerCase(),
-                            ),
-                        filter: (query) {
-                          query = removeDiacritics(query).toLowerCase();
+                      child: BlocProvider(
+                        create: (context) => OperatorsBloc(),
+                        child: BlocBuilder<OperatorsBloc, OperatorsState>(
+                          builder: (context, state) {
+                            if (state is OperatorsInitial) {
+                              context.read<OperatorsBloc>().add(
+                                FetchOperators(),
+                              );
+                            } else if (state is OperatorsLoading) {
+                              return Center(
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.all(5),
+                                      child: CircularProgressIndicator(),
+                                    ),
+                                    Text("Loading operators"),
+                                  ],
+                                ),
+                              );
+                            } else if (state is OperatorsErrored) {
+                              return RichText(
+                                text: TextSpan(
+                                  children: [
+                                    WidgetSpan(
+                                      child: Icon(
+                                        Icons.error_outline,
+                                        color: Colors.red,
+                                        size: 14,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: state.ErrorMessage,
+                                      style: TextStyle(color: Colors.red),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            } else if (state is OperatorsLoaded) {
+                              return SearchableList(
+                                initialList: state.Operators,
+                                searchFieldPadding: EdgeInsets.only(
+                                  bottom: 5,
+                                  top: 5,
+                                ),
+                                inputDecoration: InputDecoration(
+                                  hintText: "Cautare",
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    borderSide: BorderSide(width: 1.0),
+                                  ),
+                                  focusColor: Theme.of(context).focusColor,
+                                  focusedBorder: const OutlineInputBorder(
+                                    borderSide: BorderSide(width: 2.0),
+                                  ),
+                                ),
+                                itemBuilder:
+                                    (item) =>
+                                        OperatorCard(ServiceOperator: item),
+                                sortPredicate:
+                                    (a, b) => a.Name.toLowerCase().compareTo(
+                                      b.Name.toLowerCase(),
+                                    ),
+                                filter: (query) {
+                                  query = removeDiacritics(query).toLowerCase();
 
-                          List<Operator> Results = [];
+                                  List<Operator> Results = [];
 
-                          for (var ServiceOperator in GetOperators()) {
-                            //Operator name
-                            if (removeDiacritics(
-                              ServiceOperator.Name,
-                            ).toLowerCase().contains(query)) {
-                              Results.add(ServiceOperator);
-                              //County
-                            } else if (removeDiacritics(
-                              ServiceOperator.County,
-                            ).toLowerCase().contains(query)) {
-                              Results.add(ServiceOperator);
+                                  for (var ServiceOperator in state.Operators) {
+                                    //Operator name
+                                    if (removeDiacritics(
+                                      ServiceOperator.Name,
+                                    ).toLowerCase().contains(query)) {
+                                      Results.add(ServiceOperator);
+                                      //County
+                                    } else if (removeDiacritics(
+                                      ServiceOperator.County,
+                                    ).toLowerCase().contains(query)) {
+                                      Results.add(ServiceOperator);
+                                    }
+                                  }
+
+                                  return Results;
+                                },
+                              );
                             }
-                          }
 
-                          return Results;
-                        },
+                            return Container();
+                          },
+                        ),
                       ),
                     ),
                   ],

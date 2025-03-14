@@ -1,4 +1,4 @@
-package com.example.ro_transit_app
+package ro.movero
 
 import io.flutter.embedding.android.FlutterActivity
 

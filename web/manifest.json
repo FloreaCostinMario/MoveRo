@@ -1,9 +1,9 @@
 {
-    "name": "ro_transit_app",
-    "short_name": "ro_transit_app",
+    "name": "MoveRo",
+    "short_name": "MoveRo",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
+    "background_color": "#FFFFFF",
     "theme_color": "#0175C2",
     "description": "A new Flutter project.",
     "orientation": "portrait-primary",

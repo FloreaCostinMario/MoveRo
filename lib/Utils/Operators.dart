@@ -33,17 +33,23 @@ class Operator {
     "optional": {},
   };
 
-  factory Operator.fromJson(Map<String, dynamic> json) => Operator(
-    json["name"],
-    json["county"],
-    ZoneCenter: LatLng(json["zone"]["center"][0], json["zone"]["center"][1]),
-    ZoneRadius: json["zone"]["radius"],
-    ViewMode: json["viewmode"],
-    ViewLink: json["viewlink"],
-    AndroidPackageName: json["packages"]["android"],
-    IosPackageName: json["packages"]["ios"],
-    OptionalParams: json["optional"],
-  );
+  factory Operator.fromJson(Map<String, dynamic> json) {
+    print(json);
+    return Operator(
+      json["name"],
+      json["county"],
+      ZoneCenter: LatLng(
+        json["zone"]["center"]["coordinates"][0],
+        json["zone"]["center"]["coordinates"][1],
+      ),
+      ZoneRadius: json["zone"]["radius"],
+      ViewMode: json["viewmode"],
+      ViewLink: json["viewlink"],
+      AndroidPackageName: json["packages"]["android"],
+      IosPackageName: json["packages"]["ios"],
+      OptionalParams: json["optional"],
+    );
+  }
 }
 
 /*

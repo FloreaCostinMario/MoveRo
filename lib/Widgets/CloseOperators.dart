@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:ro_transit_app/Utils/FetchOperators.dart';
 import 'package:ro_transit_app/Utils/GeolocationUtils.dart';
 import 'package:ro_transit_app/Widgets/OperatorCard.dart';
 
@@ -24,7 +23,7 @@ Widget GenerateOperatorCards(Position pos) {
   List<Widget> CardList = [];
   LatLng Position = LatLng(pos.latitude, pos.longitude);
 
-  for (var ServiceOperator in GetOperators()) {
+  for (var ServiceOperator in []) {
     final Dist = Distance().as(
       LengthUnit.Kilometer,
       Position,
