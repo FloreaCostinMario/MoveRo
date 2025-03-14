@@ -1,16 +1,12 @@
-# ro_transit_app
+![Dynamic Badge](https://img.shields.io/badge/dynamic/json.svg?label=Operator%20count&url=https://raw.githubusercontent.com/FloreaCostinMario/MoveRo/refs/heads/main/config/Operators.json&query=$.length&colorB=informational)
 
-A new Flutter project.
+![Static Badge](https://img.shields.io/badge/Flutter%2C%203.24.0?logo=flutter&color=3fc4ff&cacheSeconds=300&link=flutter.dev)
 
-## Getting Started
+# MoveRo
+MoveRo is an open source mobile app which aims to help Moblility in Romania by agregating all oficial public transportation apps and sites and showing them to the user starting with those closest to the user.
 
-This project is a starting point for a Flutter application.
+## Contribute
 
-A few resources to get you started if this is your first Flutter project:
+ If you want to help by adding more operators, features or bug fixes, feel free to [create an pull request.](https://github.com/FloreaCostinMario/MoveRo/pulls)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ If you would like to report an issue, please use the [issue tracker](https://github.com/FloreaCostinMario/MoveRo/issues) on GitHub.
