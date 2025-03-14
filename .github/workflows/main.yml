@@ -44,7 +44,7 @@ jobs:  # Telling what jobs we need to happen
           flutter-version-file: pubspec.yaml # path to pubspec.yaml
   
       - name: Build apk
-        run: flutter build apk
+        run: flutter build apk --release
       
       - name: Build appBundle
         run: flutter build appbundle
@@ -58,7 +58,7 @@ jobs:  # Telling what jobs we need to happen
           tar -czf ios_build.tar.gz ios
           
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Releases
           path: |
