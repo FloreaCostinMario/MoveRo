@@ -1,0 +1,522 @@
+[
+    {
+        "name": "Societatea de Transport Bucuresti",
+        "county": "Bucuresti - Ilfov",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    26.102778,
+                    44.435408
+                ]
+            },
+            "radius": 40.62
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://info.stb.ro/",
+        "packages": {
+            "android": "ro.stbsa",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "CT Bus Constanta",
+        "county": "Constanta",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    28.651657,
+                    44.176718
+                ]
+            },
+            "radius": 16.52
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://info.ctbus.ro/",
+        "packages": {
+            "android": "ro.ratc",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Transurbis (Zalău)",
+        "county": "Salaj",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    23.0588,
+                    47.1797
+                ]
+            },
+            "radius": 5.0
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://carduri.tuz.ro/",
+        "packages": {
+            "android": "ro.zlu",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Oradea Transport Local",
+        "county": "Bihor",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    28.651657,
+                    44.176718
+                ]
+            },
+            "radius": 5.5
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://abonamente.otl.ro/",
+        "packages": {
+            "android": "ro.otl",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Oradea Transport Local \n (Aplicatie Tranzy)",
+        "county": "Bihor",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    28.651657,
+                    44.176718
+                ]
+            },
+            "radius": 5.5
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://apps.tranzy.ai/map/otl-ro",
+        "packages": {
+            "android": "ro.otl",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Transport Urban Satu Mare",
+        "county": "Satu Mare",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    22.8735,
+                    47.7886
+                ]
+            },
+            "radius": 5.0
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://info.tusm.ro/",
+        "packages": {
+            "android": "ro.sm",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "CTP Iasi",
+        "county": "Iasi",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    27.58889,
+                    47.16222
+                ]
+            },
+            "radius": 17.0
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://info.sctpiasi.ro/",
+        "packages": {
+            "android": "ro.iasi.ctp",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "CTP Iasi (Tranzy)",
+        "county": "Iasi",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    27.58889,
+                    47.16222
+                ]
+            },
+            "radius": 17.0
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://apps.tranzy.ai/map/sctp-is-ro?lang=ro",
+        "packages": {
+            "android": "com.winkgo",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "CTP Cluj-Napoca",
+        "county": "Cluj",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    23.6268,
+                    46.782
+                ]
+            },
+            "radius": 14.0
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://apps.tranzy.ai/map/ctp-cj-ro",
+        "packages": {
+            "android": "com.winkgo",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Societatea de Transport Public Timișoara",
+        "county": "Timis",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    21.2194,
+                    45.759
+                ]
+            },
+            "radius": 16.3
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://apps.tranzy.ai/map/stpt-tm-ro",
+        "packages": {
+            "android": "com.winkgo",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Elatrans (Botosani)",
+        "county": "Botosani",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    26.676,
+                    47.7533
+                ]
+            },
+            "radius": 16.3
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://apps.tranzy.ai/map/eltrans-bt-ro",
+        "packages": {
+            "android": "com.winkgo",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Tursib (Sibiu)",
+        "county": "Sibiu",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    26.676,
+                    47.7533
+                ]
+            },
+            "radius": 16.3
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://ro-sibiu-pia-2.thoreb.com/InfoThorebWeb/",
+        "packages": {
+            "android": "snt.eticketing.mobileapp",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "RAT Craiova",
+        "county": "Dolj",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    23.8069,
+                    44.3234
+                ]
+            },
+            "radius": 14.3
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://craiova-transport.com/",
+        "packages": {
+            "android": "com.modeshift.craiova",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Braicar",
+        "county": "Braila",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    27.9657,
+                    45.2723
+                ]
+            },
+            "radius": 10.0
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://braila-transport.com/",
+        "packages": {
+            "android": "com.modeshift.braila",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Trans Bus Buzau",
+        "county": "Buzau",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    26.8203,
+                    45.1377
+                ]
+            },
+            "radius": 20.0
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://buzau-transport.com/",
+        "packages": {
+            "android": "com.modeshift.buzau",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Bocsa",
+        "county": "Caraș-Severin",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    21.73128,
+                    45.37788
+                ]
+            },
+            "radius": 3.0
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://bocsa-transport.telelink.city/",
+        "packages": {
+            "android": "com.modeshift.bocsa",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "TPU Drobeta",
+        "county": "Mehedinti",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    22.6515,
+                    44.6256
+                ]
+            },
+            "radius": 5.72
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://drobeta-transport.telelink.city/",
+        "packages": {
+            "android": "com.modeshift.drobeta",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Transport Public Focsani",
+        "county": "Vrancea",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    27.1858,
+                    45.6991
+                ]
+            },
+            "radius": 11.6
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://focsani-transport.telelink.city/",
+        "packages": {
+            "android": "com.modeshift.focsani",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "CTP Arad",
+        "county": "Arad",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    21.31976,
+                    46.17527
+                ]
+            },
+            "radius": 9.83
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://arad-transport.telelink.city/",
+        "packages": {
+            "android": "com.modeshift.arad",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Transurb Dej",
+        "county": "Cluj",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    23.87601,
+                    47.14267
+                ]
+            },
+            "radius": 11.0
+        },
+        "viewmode": "WebView",
+        "viewlink": null,
+        "packages": {
+            "android": "com.modeshift.dej",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Meditur",
+        "county": "Sibiu",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    24.3481,
+                    46.1612
+                ]
+            },
+            "radius": 6.57
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://medias-transport.telelink.city/",
+        "packages": {
+            "android": "com.modeshift.meditur",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Transport Public Tulcea",
+        "county": "Tulcea",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    28.80093,
+                    45.17832
+                ]
+            },
+            "radius": 6.33
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://tulcea-transport.com/",
+        "packages": {
+            "android": "com.modeshift.tulcea",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Transmixt",
+        "county": "Bistrita-Nasaud",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    24.4991,
+                    47.1347
+                ]
+            },
+            "radius": 61.33
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://bistrita-transport.com/",
+        "packages": {
+            "android": "com.modeshift.bistrita",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Transport Public Sinaia",
+        "county": "Prahova",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    25.54804,
+                    45.34515
+                ]
+            },
+            "radius": 3.17
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://sinaia-transport.com/",
+        "packages": {
+            "android": "com.modeshift.sinaia",
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "RAT Brasov",
+        "county": "Brasov",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    25.61061,
+                    45.65239
+                ]
+            },
+            "radius": 48.0
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://routing.ratbv.ro/",
+        "packages": {
+            "android": null,
+            "ios": null
+        },
+        "optional": {}
+    },
+    {
+        "name": "Transurb Galati",
+        "county": "Galati",
+        "zone": {
+            "center": {
+                "coordinates": [
+                    28.057,
+                    45.434
+                ]
+            },
+            "radius": 8.87
+        },
+        "viewmode": "WebView",
+        "viewlink": "https://info.transportgalati.ro/",
+        "packages": {
+            "android": "ro.transurbgalati.mobile",
+            "ios": null
+        },
+        "optional": {}
+    }
+]
