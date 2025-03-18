@@ -6,11 +6,6 @@ import 'package:ro_transit_app/Widgets/OperatorCard.dart';
 
 Future<Widget> GetCloseOperators() async {
   try {
-    //Location service check
-    if (await Geolocator.isLocationServiceEnabled() != true) {
-      return Future.error('Locatia este dezactivata');
-    }
-
     Position position = await GetLocation(ShouldAskForPermission: true);
 
     return GenerateOperatorCards(position);
@@ -23,6 +18,7 @@ Widget GenerateOperatorCards(Position pos) {
   List<Widget> CardList = [];
   LatLng Position = LatLng(pos.latitude, pos.longitude);
 
+  //Replace with operator data from list
   for (var ServiceOperator in []) {
     final Dist = Distance().as(
       LengthUnit.Kilometer,

@@ -40,55 +40,15 @@ class Home extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    "Operatori in zona",
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      fontFamily: "Bahnschrift",
-                      fontFamilyFallback: ["Helvetica", "Arial"],
-                    ),
-                  ),
-                  FutureBuilder<Widget>(
-                    future: GetCloseOperators(),
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return CircularProgressIndicator.adaptive();
-                      } else if (snapshot.hasError) {
-                        return RichText(
-                          text: TextSpan(
-                            children: [
-                              WidgetSpan(
-                                child: Icon(
-                                  Icons.error_outline,
-                                  color: Colors.red,
-                                  size: 14,
-                                ),
-                              ),
-                              TextSpan(
-                                text: " ${snapshot.error.toString()}",
-                                style: TextStyle(color: Colors.red),
-                              ),
-                            ],
-                          ),
-                        );
-                      } else {
-                        return snapshot.data ?? SizedBox.shrink();
-                      }
-                    },
-                  ),
-                ],
-              ),
-              Expanded(
-                child: Column(
+          child: BlocProvider(
+            create: (context) => OperatorsBloc(),
+            child: Column(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "Lista operatori",
+                      "Operatori in zona",
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -96,9 +56,50 @@ class Home extends StatelessWidget {
                         fontFamilyFallback: ["Helvetica", "Arial"],
                       ),
                     ),
-                    Expanded(
-                      child: BlocProvider(
-                        create: (context) => OperatorsBloc(),
+                    FutureBuilder<Widget>(
+                      future: GetCloseOperators(),
+                      builder: (context, snapshot) {
+                        if (snapshot.connectionState ==
+                            ConnectionState.waiting) {
+                          return CircularProgressIndicator.adaptive();
+                        } else if (snapshot.hasError) {
+                          return RichText(
+                            text: TextSpan(
+                              children: [
+                                WidgetSpan(
+                                  child: Icon(
+                                    Icons.error_outline,
+                                    color: Colors.red,
+                                    size: 14,
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: " ${snapshot.error.toString()}",
+                                  style: TextStyle(color: Colors.red),
+                                ),
+                              ],
+                            ),
+                          );
+                        } else {
+                          return snapshot.data ?? SizedBox.shrink();
+                        }
+                      },
+                    ),
+                  ],
+                ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Text(
+                        "Lista operatori",
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          fontFamily: "Bahnschrift",
+                          fontFamilyFallback: ["Helvetica", "Arial"],
+                        ),
+                      ),
+                      Expanded(
                         child: BlocBuilder<OperatorsBloc, OperatorsState>(
                           builder: (context, state) {
                             if (state is OperatorsInitial) {
@@ -188,11 +189,11 @@ class Home extends StatelessWidget {
                           },
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

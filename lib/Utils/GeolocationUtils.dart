@@ -27,9 +27,16 @@ Future<Position> GetLocation({bool? ShouldAskForPermission}) async {
       }
     }
 
-    return await Geolocator.getCurrentPosition(
+    print(await Geolocator.isLocationServiceEnabled());
+    print(await Geolocator.checkPermission());
+
+    final position = await Geolocator.getCurrentPosition(
       locationSettings: LocationSettings(accuracy: LocationAccuracy.low),
     );
+
+    print(position);
+
+    return position;
   } catch (e) {
     return Future.error("An error has occured: $e");
   }

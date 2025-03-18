@@ -9,7 +9,7 @@ part 'operators_event.dart';
 part 'operators_state.dart';
 
 const _OperatorConfigURL =
-    "https://raw.githubusercontent.com/FloreaCostinMario/MoveRo/refs/heads/main/config/Operators.json?token=GHSAT0AAAAAAC6T4434MLOIAIMDRC56SZ6IZ6ULMUQ";
+    "https://raw.githubusercontent.com/FloreaCostinMario/MoveRo/refs/heads/main/config/Operators.json";
 
 class OperatorsBloc extends Bloc<OperatorsEvent, OperatorsState> {
   OperatorsBloc() : super(OperatorsInitial()) {
@@ -24,12 +24,9 @@ class OperatorsBloc extends Bloc<OperatorsEvent, OperatorsState> {
     emit(OperatorsLoading());
 
     try {
-      print("fetching operators");
       var file = await DefaultCacheManager().getSingleFile(_OperatorConfigURL);
-      print("fetched");
-
       final Json = json.decode(utf8.decode(file.readAsBytesSync())) as List;
-      print(Json);
+
       emit(
         OperatorsLoaded(
           Operators: Json.map((e) => Operator.fromJson(e)).toList(),
