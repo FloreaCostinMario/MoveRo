@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ro_transit_app/Blocs/Operators/operators_bloc.dart';
+import 'package:ro_transit_app/Blocs/Theme/bloc/theme_bloc.dart';
 import 'package:ro_transit_app/Utils/Operators.dart';
+import 'package:ro_transit_app/Widgets/AddOperatorCard.dart';
 import 'package:ro_transit_app/Widgets/CloseOperators.dart';
 import 'package:ro_transit_app/Widgets/OperatorCard.dart';
 import 'package:searchable_listview/searchable_listview.dart';
@@ -13,6 +15,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentTheme = context.watch<ThemeBloc>().state.theme;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -28,9 +31,48 @@ class Home extends StatelessWidget {
         leading: null,
         actions: [
           IconButton(
+            tooltip: "",
+            onPressed: () async {
+              final ThemeMode NewTheme;
+
+              switch (currentTheme) {
+                case ThemeMode.system:
+                  NewTheme = ThemeMode.light;
+                  break;
+                case ThemeMode.light:
+                  NewTheme = ThemeMode.dark;
+                  break;
+                case ThemeMode.dark:
+                  NewTheme = ThemeMode.system;
+                  break;
+              }
+
+              //Change theme
+              context.read<ThemeBloc>().add(ThemeChanged(theme: NewTheme));
+
+              //Inform user
+              ScaffoldMessenger.of(context).hideCurrentSnackBar();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    'Noua tema este ${NewTheme.toString().replaceAll("ThemeMode.", "")}',
+                  ),
+                  action: SnackBarAction(
+                    label: 'Dismiss',
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                    },
+                  ),
+                ),
+              );
+            },
+            icon: Icon(Icons.brightness_6_rounded),
+          ),
+          IconButton(
+            tooltip: "Cod sursa",
             onPressed:
                 () => launchUrl(
-                  Uri.parse("https://github.com"),
+                  Uri.parse("https://github.com/FloreaCostinMario/MoveRo"),
                   mode: LaunchMode.externalApplication,
                 ),
             icon: Icon(Icons.code),
@@ -182,6 +224,7 @@ class Home extends StatelessWidget {
 
                                   return Results;
                                 },
+                                emptyWidget: AddOperatorCard(),
                               );
                             }
 
