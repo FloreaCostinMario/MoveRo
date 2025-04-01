@@ -12,8 +12,9 @@ For adding new operators [check out the quick instructions](https://github.com/F
  If you want to help by adding more operators, features or bug fixes, feel free to [create an pull request.](https://github.com/FloreaCostinMario/MoveRo/pulls)
 
  If you would like to report an issue, please use the [issue tracker](https://github.com/FloreaCostinMario/MoveRo/issues) on GitHub.
-
-![App screenshot](./resources/AppScreenshot.png)
+<p align="center">
+<img src="./resources/AppScreenshot.png" width="250">
+</p>
 
 # Disclaimer
 
