@@ -30,6 +30,24 @@ Future<bool?> HasAppInstalled(String? AndroidPackageName) async {
   }
 }
 
+class CardNote extends StatelessWidget {
+  final optionalParameters;
+
+  const CardNote({super.key, required this.optionalParameters});
+
+  @override
+  Widget build(BuildContext context) {
+    if (optionalParameters["note"] == null) {
+      return SizedBox.shrink();
+    } else {
+      return Text(
+        "Judet: ${optionalParameters["note"]}",
+        style: TextStyle(fontStyle: FontStyle.italic),
+      );
+    }
+  }
+}
+
 class OperatorCard extends StatelessWidget {
   final Operator ServiceOperator;
 
@@ -109,6 +127,7 @@ class OperatorCard extends StatelessWidget {
                     ),
                   ],
                 ),
+                CardNote(optionalParameters: ServiceOperator.OptionalParams),
               ],
             ),
       ),

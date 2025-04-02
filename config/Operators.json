@@ -492,12 +492,14 @@
             "radius": 48.0
         },
         "viewmode": "WebView",
-        "viewlink": "https://routing.ratbv.ro/",
+        "viewlink": "https://routing.ratbv.ro/cards",
         "packages": {
             "android": null,
             "ios": null
         },
-        "optional": {}
+        "optional": {
+            "note": "Site is not yet publically released. Currently has an issue where it doesn't load on certain browsers."
+        }
     },
     {
         "name": "Transurb Galati",
