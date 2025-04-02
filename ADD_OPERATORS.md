@@ -14,7 +14,7 @@ To add an new operator or update an existing one [open an issue](https://github.
 ```json
 {
     "name": "Societatea de Transport Bucuresti", //Operator name
-    "county": "Bucuresti - Ilfov", //County
+    "location": "Regiunea Bucuresti - Ilfov", //Location
     "zone": { //Zone boundries for geolocation
         "center": { //Center of the zone usually the city center
             "coordinates": [
@@ -31,6 +31,8 @@ To add an new operator or update an existing one [open an issue](https://github.
         "android": "ro.stbsa", 
         "ios": null
     },
-    "optional": {} //Optional parameters which can be used in future if needed
+    "optional": { //Optional parameters which can be used in future if needed
+        "note": "Acest operator arata si datele pentru metrou." // Notes which can be used to discribe issues with implementation, sites or other miscelanious things.
+    } 
 },
 ```

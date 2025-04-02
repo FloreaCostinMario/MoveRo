@@ -214,9 +214,9 @@ class Home extends StatelessWidget {
                                       ServiceOperator.Name,
                                     ).toLowerCase().contains(query)) {
                                       Results.add(ServiceOperator);
-                                      //County
+                                      //Location
                                     } else if (removeDiacritics(
-                                      ServiceOperator.County,
+                                      ServiceOperator.Location,
                                     ).toLowerCase().contains(query)) {
                                       Results.add(ServiceOperator);
                                     }

@@ -38,10 +38,12 @@ class CardNote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (optionalParameters["note"] == null) {
+      print("none ${optionalParameters}");
       return SizedBox.shrink();
     } else {
       return Text(
-        "Judet: ${optionalParameters["note"]}",
+        optionalParameters["note"],
+        textAlign: TextAlign.center,
         style: TextStyle(fontStyle: FontStyle.italic),
       );
     }
@@ -65,7 +67,7 @@ class OperatorCard extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                Text("Judet: ${ServiceOperator.County}"),
+                Text(ServiceOperator.Location),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

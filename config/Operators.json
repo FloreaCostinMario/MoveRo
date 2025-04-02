@@ -1,7 +1,7 @@
 [
     {
         "name": "Societatea de Transport Bucuresti",
-        "county": "Bucuresti - Ilfov",
+        "location": "Regiunea Bucuresti - Ilfov",
         "zone": {
             "center": {
                 "coordinates": [
@@ -21,7 +21,7 @@
     },
     {
         "name": "CT Bus Constanta",
-        "county": "Constanta",
+        "location": "Judetul Constanta",
         "zone": {
             "center": {
                 "coordinates": [
@@ -41,7 +41,7 @@
     },
     {
         "name": "Transurbis (Zalău)",
-        "county": "Salaj",
+        "location": "Judetul Salaj",
         "zone": {
             "center": {
                 "coordinates": [
@@ -61,7 +61,7 @@
     },
     {
         "name": "Oradea Transport Local",
-        "county": "Bihor",
+        "location": "Judetul Bihor",
         "zone": {
             "center": {
                 "coordinates": [
@@ -81,7 +81,7 @@
     },
     {
         "name": "Oradea Transport Local \n (Aplicatie Tranzy)",
-        "county": "Bihor",
+        "location": "Judetul Bihor",
         "zone": {
             "center": {
                 "coordinates": [
@@ -101,7 +101,7 @@
     },
     {
         "name": "Transport Urban Satu Mare",
-        "county": "Satu Mare",
+        "location": "Judetul Satu Mare",
         "zone": {
             "center": {
                 "coordinates": [
@@ -121,7 +121,7 @@
     },
     {
         "name": "CTP Iasi",
-        "county": "Iasi",
+        "location": "Judetul Iasi",
         "zone": {
             "center": {
                 "coordinates": [
@@ -141,7 +141,7 @@
     },
     {
         "name": "CTP Iasi (Tranzy)",
-        "county": "Iasi",
+        "location": "Judetul Iasi",
         "zone": {
             "center": {
                 "coordinates": [
@@ -161,7 +161,7 @@
     },
     {
         "name": "CTP Cluj-Napoca",
-        "county": "Cluj",
+        "location": "Judetul Cluj",
         "zone": {
             "center": {
                 "coordinates": [
@@ -181,7 +181,7 @@
     },
     {
         "name": "Societatea de Transport Public Timișoara",
-        "county": "Timis",
+        "location": "Judetul Timis",
         "zone": {
             "center": {
                 "coordinates": [
@@ -201,7 +201,7 @@
     },
     {
         "name": "Elatrans (Botosani)",
-        "county": "Botosani",
+        "location": "Judetul Botosani",
         "zone": {
             "center": {
                 "coordinates": [
@@ -221,7 +221,7 @@
     },
     {
         "name": "Tursib (Sibiu)",
-        "county": "Sibiu",
+        "location": "Judetul Sibiu",
         "zone": {
             "center": {
                 "coordinates": [
@@ -241,7 +241,7 @@
     },
     {
         "name": "RAT Craiova",
-        "county": "Dolj",
+        "location": "Judetul Dolj",
         "zone": {
             "center": {
                 "coordinates": [
@@ -261,7 +261,7 @@
     },
     {
         "name": "Braicar",
-        "county": "Braila",
+        "location": "Judetul Braila",
         "zone": {
             "center": {
                 "coordinates": [
@@ -281,7 +281,7 @@
     },
     {
         "name": "Trans Bus Buzau",
-        "county": "Buzau",
+        "location": "Judetul Buzau",
         "zone": {
             "center": {
                 "coordinates": [
@@ -301,7 +301,7 @@
     },
     {
         "name": "Bocsa",
-        "county": "Caraș-Severin",
+        "location": "Judetul Caraș-Severin",
         "zone": {
             "center": {
                 "coordinates": [
@@ -321,7 +321,7 @@
     },
     {
         "name": "TPU Drobeta",
-        "county": "Mehedinti",
+        "location": "Judetul Mehedinti",
         "zone": {
             "center": {
                 "coordinates": [
@@ -341,7 +341,7 @@
     },
     {
         "name": "Transport Public Focsani",
-        "county": "Vrancea",
+        "location": "Judetul Vrancea",
         "zone": {
             "center": {
                 "coordinates": [
@@ -361,7 +361,7 @@
     },
     {
         "name": "CTP Arad",
-        "county": "Arad",
+        "location": "Judetul Arad",
         "zone": {
             "center": {
                 "coordinates": [
@@ -381,7 +381,7 @@
     },
     {
         "name": "Transurb Dej",
-        "county": "Cluj",
+        "location": "Judetul Cluj",
         "zone": {
             "center": {
                 "coordinates": [
@@ -401,7 +401,7 @@
     },
     {
         "name": "Meditur",
-        "county": "Sibiu",
+        "location": "Medias, judetul Sibiu",
         "zone": {
             "center": {
                 "coordinates": [
@@ -421,7 +421,7 @@
     },
     {
         "name": "Transport Public Tulcea",
-        "county": "Tulcea",
+        "location": "Judetul Tulcea",
         "zone": {
             "center": {
                 "coordinates": [
@@ -441,7 +441,7 @@
     },
     {
         "name": "Transmixt",
-        "county": "Bistrita-Nasaud",
+        "location": "Judetul Bistrita-Nasaud",
         "zone": {
             "center": {
                 "coordinates": [
@@ -461,7 +461,7 @@
     },
     {
         "name": "Transport Public Sinaia",
-        "county": "Prahova",
+        "location": "Judetul Prahova",
         "zone": {
             "center": {
                 "coordinates": [
@@ -481,7 +481,7 @@
     },
     {
         "name": "RAT Brasov",
-        "county": "Brasov",
+        "location": "Judetul Brasov",
         "zone": {
             "center": {
                 "coordinates": [
@@ -498,12 +498,12 @@
             "ios": null
         },
         "optional": {
-            "note": "Site is not yet publically released. Currently has an issue where it doesn't load on certain browsers."
+            "note": "Siteul nu este lansat publicului inca. Momentan are o problema cu anumite browsere."
         }
     },
     {
         "name": "Transurb Galati",
-        "county": "Galati",
+        "location": "Judetul Galati",
         "zone": {
             "center": {
                 "coordinates": [

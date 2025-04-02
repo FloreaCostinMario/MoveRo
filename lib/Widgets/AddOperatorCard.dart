@@ -6,7 +6,7 @@ class AddOperatorCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Center(
       child: Builder(
         builder:
             (context) => Column(

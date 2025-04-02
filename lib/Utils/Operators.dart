@@ -2,7 +2,7 @@ import 'package:latlong2/latlong.dart';
 
 class Operator {
   String Name;
-  String County;
+  String Location;
   LatLng ZoneCenter;
   double ZoneRadius;
   String? ViewMode;
@@ -13,7 +13,7 @@ class Operator {
 
   Operator(
     this.Name,
-    this.County, {
+    this.Location, {
     required this.ZoneCenter,
     required this.ZoneRadius,
     this.ViewMode,
@@ -26,7 +26,7 @@ class Operator {
   //No real use at the moment
   Map<String, dynamic> toJson() => {
     "name": Name,
-    "county": County,
+    "location": Location,
     "zone": {"center": ZoneCenter, "radius": ZoneRadius},
     "viewmode": ViewMode,
     "viewlink": ViewLink,
@@ -38,7 +38,7 @@ class Operator {
   factory Operator.fromJson(Map<String, dynamic> json) {
     return Operator(
       json["name"],
-      json["county"],
+      json["location"],
       ZoneCenter: LatLng(
         json["zone"]["center"]["coordinates"][0],
         json["zone"]["center"]["coordinates"][1],
